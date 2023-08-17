@@ -3,7 +3,6 @@ import "../assets/bootstrap.css";
 import "../assets/style.css";
 import "../assets/responsive.css";
 import Form from "../components/Form";
-import Table from "../components/Table";
 
 function HomePage() {
   return (
@@ -14,18 +13,6 @@ function HomePage() {
             <div className="col">
               <Form />
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="item_list_section layout_padding">
-        <div className="container">
-          <div className="heading_container heading_center">
-            <h2>
-              <span>Product List</span>
-            </h2>
-          </div>
-          <div className="carousel-wrap">
-            <Table />
           </div>
         </div>
       </section>

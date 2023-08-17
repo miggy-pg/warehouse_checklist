@@ -141,7 +141,6 @@ a:focus {
 }
 
 .product_form_section {
-  content: "\f107";
   border: none;
   width: auto;
   height: auto;
@@ -154,14 +153,8 @@ a:focus {
   transition: all 0.3s;
 }
 
-.item_list_section {
-  background-color: #00c6a9;
-}
-
 .item_list_section .heading_container {
   padding: 1rem;
-  border-radius: 2rem 2rem 0 0rem;
-  border: 0.3rem solid #bafcf2;
 }
 
 .item_list_section .heading_container h2 {
@@ -189,41 +182,17 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding: 0 10px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(10%, transparent),
-    color-stop(10%, #ffffff)
-  );
+  font-size: 0.8rem;
 }
 
 .item_list_section img {
   width: 100%;
 }
 
-.item_list_section {
-  padding: 15px;
-  border-radius: 10px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.item_list_section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 .item_list_section a {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -238,12 +207,10 @@ a:focus {
 
 .item_list_section {
   margin-top: 45px;
-  padding: 0 45px;
   display: -webkit-box;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .item_list_section button {

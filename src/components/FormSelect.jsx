@@ -1,7 +1,7 @@
-export function FormSelect() {
+export function FormSelect({ tag }) {
   return (
-    <select name="" className="form-control wide" id="selectProductTags">
-      <option value="Normal distribution ">Normal distribution</option>
-    </select>
+    <option value={tag} key={tag}>
+      {tag}
+    </option>
   );
 }
