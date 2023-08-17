@@ -1,4 +1,9 @@
+import { useState } from "react";
+import { FormSelect } from "./FormSelect";
+
 function Form() {
+  const [product, setProduct] = useState({});
+
   return (
     <form>
       <h4>
@@ -6,38 +11,31 @@ function Form() {
       </h4>
       <div className="form-row">
         <div className="form-group col-lg-4">
-          <label for="inputPatientName">Patient Name </label>
+          <label>Product Name </label>
           <input
             type="text"
             className="form-control"
-            id="inputPatientName"
+            id="inputProductName"
             placeholder=""
           />
         </div>
         <div className="form-group col-lg-4">
-          <label for="inputDoctorName">Doctor's Name</label>
-          <select name="" className="form-control wide" id="inputDoctorName">
-            <option value="Normal distribution ">Normal distribution</option>
-            <option value="Normal distribution ">Normal distribution</option>
-            <option value="Normal distribution ">Normal distribution</option>
-          </select>
+          <label>Internal Reference</label>
+          <input
+            type="text"
+            className="form-control"
+            id="inputInternalRef"
+            placeholder=""
+          />
         </div>
         <div className="form-group col-lg-4">
-          <label for="inputDepartmentName">Department's Name</label>
-          <select
-            name=""
-            className="form-control wide"
-            id="inputDepartmentName"
-          >
-            <option value="Normal distribution ">Normal distribution</option>
-            <option value="Normal distribution ">Normal distribution</option>
-            <option value="Normal distribution ">Normal distribution</option>
-          </select>
+          <label>Product Tags</label>
+          <FormSelect />
         </div>
       </div>
       <div className="form-row">
         <div className="form-group col-lg-4">
-          <label for="inputPhone">Phone Number</label>
+          <label>Sales Price</label>
           <input
             type="number"
             className="form-control"
@@ -46,22 +44,35 @@ function Form() {
           />
         </div>
         <div className="form-group col-lg-4">
-          <label for="inputSymptoms">Symptoms</label>
+          <label>Cost</label>
           <input
-            type="text"
+            type="number"
             className="form-control"
             id="inputSymptoms"
             placeholder=""
           />
         </div>
         <div className="form-group col-lg-4">
-          <label for="inputDate">Choose Date </label>
+          <label>Expiration Date </label>
           <div
             className="input-group date"
             id="inputDate"
             data-date-format="mm-dd-yyyy"
           >
-            <input type="text" className="form-control" readonly />
+            <input type="text" className="form-control" readOnly />
+            <span className="input-group-addon date_icon">
+              <i className="fa fa-calendar" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <div className="form-group col-lg-4">
+          <label>Quantity on Hand </label>
+          <div
+            className="input-group date"
+            id="inputDate"
+            data-date-format="mm-dd-yyyy"
+          >
+            <input type="text" className="form-control" readOnly />
             <span className="input-group-addon date_icon">
               <i className="fa fa-calendar" aria-hidden="true"></i>
             </span>
