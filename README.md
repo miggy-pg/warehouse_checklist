@@ -15,6 +15,13 @@ Welcome to the Warehouse Checklist website! This project was developed using Rea
 - User-friendly interface with responsive design
 - Utilizes the power of React components for a dynamic user experience
 
+
+## Screenshots
+
+### Home Page
+
+![Homepage](screenshots/HomePage.png)
+
 ## Installation
 
 1. Clone the repository to your local machine.
