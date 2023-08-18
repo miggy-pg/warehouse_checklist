@@ -1,24 +1,22 @@
 import { useState } from "react";
 import { FormSelect } from "./FormSelect";
 
-import ProductTable from "./ProductTable";
-
-function Form() {
-  const [productList, setProductList] = useState([]);
+function Form({ addProductItem }) {
   const [product, setProduct] = useState({});
-  const [isSubmitted, setSubmitted] = useState(false);
+  const [productID, setProductID] = useState(0);
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
+    setProductID(productID + 1);
 
-    setProductList((prodList) => [...prodList, product]);
-    setSubmitted(true);
+    const addProductID = { ...product, id: productID };
+    addProductItem(addProductID);
 
     // reset all values after submitting form
     Array.from(document.querySelectorAll("input")).forEach(
       (input) => (input.value = "")
     );
-    const selectProductTags = document.getElementById("selectProductTags");
+    const selectProductTags = document.getElementById("productTags");
     selectProductTags.value = "Clothing";
   };
 
@@ -46,7 +44,7 @@ function Form() {
             <input
               type="text"
               className="form-control"
-              id="inputProductName"
+              id="productName"
               onChange={(ev) =>
                 setProduct({
                   ...product,
@@ -60,7 +58,7 @@ function Form() {
             <input
               type="text"
               className="form-control"
-              id="inputInternalRef"
+              id="internalRef"
               onChange={(ev) =>
                 setProduct({
                   ...product,
@@ -73,7 +71,7 @@ function Form() {
             <label>Product Tags</label>
             <select
               className="form-control wide"
-              id="selectProductTags"
+              id="productTags"
               onChange={(ev) =>
                 setProduct({
                   ...product,
@@ -93,7 +91,7 @@ function Form() {
             <input
               type="number"
               className="form-control"
-              id="inputSalesPrice"
+              id="salesPrice"
               onChange={(ev) =>
                 setProduct({
                   ...product,
@@ -158,38 +156,6 @@ function Form() {
           </button>
         </div>
       </form>
-      <section className="item_list_section layout_padding">
-        <div className="container">
-          <div className="heading_container heading_center">
-            <h2>
-              <span>Product List</span>
-            </h2>
-          </div>
-          <div className="carousel-wrap">
-            <div className="row">
-              <table className="table">
-                <thead className="thead-dark">
-                  <tr>
-                    <th>Product Name</th>
-                    <th>Internal Ref</th>
-                    <th>Product Tags</th>
-                    <th>Sales Price</th>
-                    <th>Cost</th>
-                    <th>Exp Date</th>
-                    <th>Qty on Hand</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {isSubmitted &&
-                    productList.map((product) => (
-                      <ProductTable props={product} key={product.id} />
-                    ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
