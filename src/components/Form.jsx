@@ -9,7 +9,7 @@ function Form({ addProductItem }) {
     ev.preventDefault();
     setProductID(productID + 1);
 
-    const addProductID = { ...product, id: productID };
+    const addProductID = { ...product, id: productID, isPacked: false };
     addProductItem(addProductID);
 
     // reset all values after submitting form

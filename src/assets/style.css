@@ -185,8 +185,28 @@ a:focus {
   font-size: 0.8rem;
 }
 
-.item_list_section img {
-  width: 100%;
+.carousel-wrap span {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.carousel-wrap h5 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight: 900;
+}
+.form-row span {
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 0;
+  height: auto;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .item_list_section a {
