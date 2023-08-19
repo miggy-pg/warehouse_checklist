@@ -20,7 +20,7 @@ Welcome to the Warehouse Checklist website! This project was developed using Rea
 
 ### Home Page
 
-![Homepage](screenshots/HomePage.png)
+![Homepage](screenshots/home_page.png)
 
 ## Installation
 
